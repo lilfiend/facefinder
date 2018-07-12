@@ -38,8 +38,7 @@ for (i, imagePath) in enumerate(imagePaths):
 	image = cv2.imread(imagePath)
 	rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-	# detect the (x, y)-coordinates of the bounding boxes
-	# corresponding to each face in the input image
+	#This is the face detection part, using CNN/HOG for the face detection is a bit intensive... but results are great
 	boxes = face_recognition.face_locations(rgb, model=args["model"])
 
 	# Encode faces, more jitters is more accurate but takes longer, eg 10 is 10x longer
