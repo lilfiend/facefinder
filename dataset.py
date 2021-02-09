@@ -25,7 +25,7 @@ print("[INFO] starting video stream...")
 if args["video"] == "0":
 	vs = VideoStream(src=0).start()
 	#this fixes a very specifc bug on Microsoft's lifecam cinema webcam. Two guesses who owns one ;)
-	time.sleep(2.0)
+	time.sleep(4.0)
 else:
 	vs = VideoStream(src=args["video"]).start()
 
